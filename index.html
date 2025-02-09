@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My BookShelf</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Personal Library Manager</h1>
+      </div>
+    </header>
+    
+    <main class="container">
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search for books...">
+        <select id="genreFilter">
+          <option value="">All Genres</option>
+          <option value="fiction">Fiction</option>
+          <option value="non-fiction">Non-Fiction</option>
+          <option value="mystery">Mystery</option>
+          <option value="science">Science</option>
+        </select>
+        <button id="searchButton">Search</button>
+      </div>
+      
+      <div class="shelves">
+        <div class="shelf">
+          <h2>Currently Reading</h2>
+          <div id="currentlyReading" class="library-grid"></div>
+        </div>
+        <div class="shelf">
+          <h2>Want to Read</h2>
+          <div id="wantToRead" class="library-grid"></div>
+        </div>
+      </div>
+      
+      <div class="recommendations">
+        <h2>Recommended Books</h2>
+        <div id="recommendedBooks" class="library-grid"></div>
+      </div>
+    </main>
+
+
+
+
+    
+    <script src="script.js"></script>
+  </body>
+  </html>
