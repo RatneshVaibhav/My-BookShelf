@@ -1,4 +1,3 @@
-    // Constants - Note: Google Books API actually doesn't require API key for basic searches
     const GOOGLE_BOOKS_API_URL = 'https://www.googleapis.com/books/v1/volumes';
     const OPEN_LIBRARY_API = 'https://openlibrary.org/api/books';
     const OPEN_LIBRARY_SEARCH = 'https://openlibrary.org/search.json';
@@ -13,7 +12,7 @@
     const searchButton = document.getElementById('searchButton');
     const genreFilter = document.getElementById('genreFilter');
 
-    // Library State
+    // library shelves
     let library = {
         currentlyReading: [],
         wantToRead: [],
@@ -22,7 +21,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
     
-        // Add click event listener to search button
+        // adding click event listener to search button
         searchButton.addEventListener('click', function(e) {
             e.preventDefault(); // Prevent form submission
             const query = searchInput.value.trim();
@@ -32,7 +31,7 @@
             }
         });
     
-        // Add form submit event listener (for pressing Enter)
+        // Adding form submit event listener (for pressing Enter)
         if (searchInput.form) {
             searchInput.form.addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -44,7 +43,7 @@
             });
         }
     
-        // Add change event listener to genre filter
+        // Adding change event listener to genre filter
         genreFilter.addEventListener('change', function() {
             const query = searchInput.value.trim();
             const genre = genreFilter.value;
